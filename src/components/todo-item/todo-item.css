@@ -1,0 +1,34 @@
+article {
+    width: 100%;
+    height: 85px;
+    background: var(--todo-bg);
+    margin-top: 1.5rem;
+    padding: 0.7rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-left: solid 7px var(--todo-border);
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px var(--shadow);
+}
+
+.title {
+    font-size: 1.2em;
+    color: var(--title-color);
+}
+
+.todo-status {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.completed {
+    color: var(--completed-color);
+}
+
+.in-process {
+    color: var(--in-process);
+}

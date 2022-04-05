@@ -1,0 +1,6 @@
+button {
+    height: 40px;
+    width: 50%;
+    margin-top: 2rem;
+    cursor: pointer;
+}

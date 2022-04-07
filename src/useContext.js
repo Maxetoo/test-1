@@ -1,15 +1,18 @@
 import React, { useContext } from 'react'
-import { useFetch } from './useFetch'
+import { useService } from './services/todo-service'
 
 const AppContext = React.createContext()
 
 const AppProvider = ({ children }) => {
-  const { isError, todoData, fetchIsSuccessful, loading, fetchData } =
-    useFetch()
-  const handleFetch = (e) => {
-    e.preventDefault()
-    fetchData()
-  }
+  const {
+    isError,
+    todoData,
+    fetchIsSuccessful,
+    loading,
+    fetchData,
+    setLoading,
+  } = useService()
+
   return (
     <AppContext.Provider
       value={{
@@ -17,7 +20,8 @@ const AppProvider = ({ children }) => {
         todoData,
         fetchIsSuccessful,
         loading,
-        handleFetch,
+        fetchData,
+        setLoading,
       }}
     >
       {children}
